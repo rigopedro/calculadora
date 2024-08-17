@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Futurista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container my-5 d-flex justify-content-center align-items-center min-vh-100">
+        <div class="calculator">
+            <div class="display">
+                <h1 id="result">0</h1>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="btn col" onclick="clearDisplay()">C</button>
+                    <button class="btn col" onclick="appendToDisplay('/')">/</button>
+                    <button class="btn col operator" onclick="appendToDisplay('*')">*</button>
+                    <button class="btn col" onclick="deleteLast()">⌫</button>
+                </div>
+                <div class="row">
+                    <button class="btn col" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn col" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn col" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn col operator" onclick="appendToDisplay('-')">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn col" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn col" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn col" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn col operator" onclick="appendToDisplay('+')">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn col" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn col" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn col" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn col equal" onclick="calculate()">=</button>
+                </div>
+                <div class="row">
+                    <button class="btn col-6" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn col" onclick="appendToDisplay('.')">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
